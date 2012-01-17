@@ -16,8 +16,8 @@ outfile5 = open(sys.argv[2]+"_processed/"+sys.argv[2]+"_genus_species_hits_lengt
 
 # unique to 128
 
-metadatafile = open("HMP_metadata.txt","r")
-metadatafile2 = open("244_custom_mod_metadata.txt","r")
+metadatafile = open("/home/comp/jglab/sathish/Satz_Scripts/support_files/HMP_metadata.txt","r")
+metadatafile2 = open("/home/comp/jglab/sathish/Satz_Scripts/support_files/244_custom_mod_metadata.txt","r")
 genome_id={}
 genome_dict={}
 genome_name={}
