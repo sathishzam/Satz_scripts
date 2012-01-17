@@ -18,7 +18,7 @@ outfile5 = open(sys.argv[2]+"_processed/"+sys.argv[2]+"_genus_species_hits_lengt
 
 # unique to 128
 
-metadatafile = open("/srv/cgs/data/GutGenomes/128_Genomes/128_Genomes_Metadata.txt","r")
+metadatafile = open("/home/comp/jglab/sathish/Satz_Scripts/support_files/128_Genomes_Metadata.txt","r")
 genome_dict={}
 genome_name={}
 genus_sp={}
