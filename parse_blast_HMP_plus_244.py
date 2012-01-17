@@ -5,16 +5,13 @@ import sys,os
 import warnings
 
 blastfile = open(sys.argv[1],"r")
-outfile = open(sys.argv[2],"w")
 
 os.makedirs(sys.argv[2]+"_processed")
-
+outfile = open(sys.argv[2]+"_processed/"+sys.argv[2],"w")
 outfile2 = open(sys.argv[2]+"_processed/"+sys.argv[2]+"_gut_hits","w")
 outfile3 = open(sys.argv[2]+"_processed/"+sys.argv[2]+"_gut_hits_length_corrected","w")
 outfile4 = open(sys.argv[2]+"_processed/"+sys.argv[2]+"_genus_species_hits","w")
 outfile5 = open(sys.argv[2]+"_processed/"+sys.argv[2]+"_genus_species_hits_length_corrected","w")
-
-# unique to 128
 
 metadatafile = open("/home/comp/jglab/sathish/Satz_Scripts/support_files/HMP_metadata.txt","r")
 metadatafile2 = open("/home/comp/jglab/sathish/Satz_Scripts/support_files/244_custom_mod_metadata.txt","r")
