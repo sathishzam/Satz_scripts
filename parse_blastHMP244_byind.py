@@ -7,14 +7,6 @@ import warnings
 blastfile = open(sys.argv[1],"r")
 outfileind = open("index","w")
 
-#os.makedirs(sys.argv[2]+"_processed")
-
-#outfile2 = open(sys.argv[2]+"_processed/"+sys.argv[2]+"_gut_hits","w")
-#outfile3 = open(sys.argv[2]+"_processed/"+sys.argv[2]+"_gut_hits_length_corrected","w")
-#outfile4 = open(sys.argv[2]+"_processed/"+sys.argv[2]+"_genus_species_hits","w")
-#outfile5 = open(sys.argv[2]+"_processed/"+sys.argv[2]+"_genus_species_hits_length_corrected","w")
-
-# unique to 128
 
 metadatafile = open("/home/comp/jglab/sathish/MALAWI_shotgun/fasta/filtered_forNs_len/filtered_N_Len_Hum_Screened/BLAST_comparisons/HMP_metadata.txt","r")
 metadatafile2 = open("/home/comp/jglab/sathish/MALAWI_shotgun/fasta/filtered_forNs_len/filtered_N_Len_Hum_Screened/BLAST_comparisons/244_custom_mod_metadata.txt","r")
@@ -122,16 +114,9 @@ for key in sorted(Gut_dict.keys()):
     genus_sp_len[(genome_dict[(genome_id[key])])]=genus_sp_len[(genome_dict[(genome_id[key])])]+corr_total
 
 for key in sorted(genus_sp.keys()):
-#    outfile4.write(key+"\t"+str(genus_sp[key])+"\n") 
-#    outfile.write(key+"\t"+str(genus_sp_len[key])+"\n")
-#    outfile.write(key+"\t"+str((genus_sp_len[key]*total_fasta)/100)+"\n")
     outfileind.write(key.replace(" ","_")+"\n")
     outfile.write(str((genus_sp_len[key]*total_fasta)/100)+"\n") 
 
-#outfile2.write("Unassigned\t"+str(100-total_assigned)+"\n")
-#outfile4.write("Unassigned\t"+str(100-total_assigned)+"\n")
-#outfile3.write("Unassigned\t"+str(100-corr_totaled)+"\n")
-#outfile.write("Unassigned\t"+str(((100-corr_totaled)*total_fasta)/100)+"\n")
 outfile.write(str(((100-corr_totaled)*total_fasta)/100)+"\n")
 outfileind.write("Unassigned\n")
 
